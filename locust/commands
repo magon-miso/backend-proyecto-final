@@ -1,0 +1,11 @@
+pip3 install locust
+py -m pip install --upgrade pip
+
+
+.\venv\Scripts\activate
+cd locust
+locust
+http://localhost:8089
+
+
+locust --headless --users 100 --spawn-rate 1 --run-time 300s --stop-timeout 3s -H http://abcjobs-public-alb-388103681.us-east-1.elb.amazonaws.com
